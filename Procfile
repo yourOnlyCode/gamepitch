@@ -1,0 +1,1 @@
+web: gunicorn gamepitch_project.wsgi --log-file -
