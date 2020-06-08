@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from .models import Developer, Game, Investor, Appeal
 
+
 class DeveloperSerializer(serializers.ModelSerializer):
     class Meta:
         model = Developer
@@ -23,4 +24,15 @@ class GameSerializer(serializers.ModelSerializer):
             'demo',
             'games')
 
+
+class InvestorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Investor
+        fields = ('id', 'name', 'image_url', 'description')
+
+
+class AppealSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Appeal
+        fields = '__all__'
 
