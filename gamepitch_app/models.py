@@ -30,4 +30,7 @@ class Investor(models.Model):
         return self.name
 
 class Appeal(models.Model):
-    
+    game = models.ForeignKey(
+        Game, on_delete=models.CASCADE, related_name='appeals')
+    investor = models.ForeignKey(
+        Investor, on_delete=models.CASCADE, related_name='appeals')
