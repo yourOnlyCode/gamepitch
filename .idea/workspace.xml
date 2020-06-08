@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fde0f5-63de-48aa-b347-1d797ab25299" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gamepitch_project/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamepitch_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gamepitch_project/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
