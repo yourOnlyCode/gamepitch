@@ -18,7 +18,7 @@ export default class App extends React.Component {
         <Router>
 
           <Switch>
-            <Route exact path="/prompt" component={Prompt} />
+            <Route exact path="/" component={Prompt} />
             <Route exact path="/feed" component={Feed} />
             <Route exact path="/developer/:developerId" component={Developer} />
             <Route exact path="/adminDev" component={AdminDeveloper} />
