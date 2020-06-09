@@ -11,10 +11,12 @@ class DeveloperSerializer(serializers.ModelSerializer):
 
 class GameSerializer(serializers.ModelSerializer):
     developer = DeveloperSerializer(many=True, read_only=True)
+
     class Meta:
         model = Game
         fields = (
             'id',
+            'name',
             'image_url',
             'description',
             'genre',
@@ -36,3 +38,13 @@ class AppealSerializer(serializers.ModelSerializer):
         model = Appeal
         fields = '__all__'
 
+
+class FeedSerializer(serializers.ModelSerializer):
+    games = GameSerializer(many=True read_only=True)
+    appeals = AppealSerializer(many=True read_only=True)
+    developer = DeveloperSerializer(many=False read_only=True)
+
+    class Meta:
+        model = Game
+        fields = ('id', 'name', 'image_url', 'description',
+                  'genre', 'games', 'appeals', 'developer')
