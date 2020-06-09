@@ -6,6 +6,7 @@ import Feed from './components/Feed.js'
 import Developer from './components/Developer.js'
 import AdminDeveloperPrompt from './components/AdminDeveloperPrompt.js'
 import DevPortal from './components/DevPortal.js'
+import InvestorPortal from './components/InvestorPortal.js';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ export default class App extends React.Component {
             <Route exact path="/developer/:developerId" component={Developer} />
             <Route exact path="/adminDev" component={AdminDeveloperPrompt} />
             <Route exact path="/devPortal/:developerId" component={DevPortal} />
+            <Route exact path="/investorPortal" component={InvestorPortal} />
           </Switch>
         </Router>
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 export default class InvestorPortal extends Component {
@@ -17,7 +18,7 @@ export default class InvestorPortal extends Component {
         this.setState(newState)
     }
 
-    onSubmitCreateInvestor = async () => {
+    onSubmitCreateInvestor = async (evt) => {
         evt.preventDefault()
         try {
             await axios.post(`/api/v1/investors`, this.state.newInvestor)
