@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-export default class AdminDeveloper extends Component {
+export default class AdminDeveloperPrompt extends Component {
 
     state = {
         developers: []
@@ -27,15 +28,23 @@ export default class AdminDeveloper extends Component {
         return (
             <div>
                 <div>Welcome, Developer!</div>
-                <div>
+                <div>Select Profile</div>
+
+                <div className="dev-select">
                     {this.state.developers.map((dev) => {
                         return (
-                            <select>
-                                <option>{dev.name}</option>
-                            </select>
+                            <Link to={`/devPortal/${dev.id}`}>
+                                <div>{dev.name}</div>
+                                <img src={dev.image_url} width='150' />
+                            </Link>
                         )
                     })}
+
+
+
+
                 </div>
+
             </div>
         )
     }

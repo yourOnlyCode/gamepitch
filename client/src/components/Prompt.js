@@ -26,7 +26,7 @@ export default class Prompt extends Component {
 
                         ? <div className='prompt'>
                             <div>Are you a Developer or Investor?</div>
-                            <Link to='/adminDev' >
+                            <Link to='/AdminDev' >
                                 <button onClick={this.developerPrompt}>Developer</button>
                             </Link>
 
