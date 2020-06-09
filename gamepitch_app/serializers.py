@@ -40,9 +40,9 @@ class AppealSerializer(serializers.ModelSerializer):
 
 
 class FeedSerializer(serializers.ModelSerializer):
-    games = GameSerializer(many=True read_only=True)
-    appeals = AppealSerializer(many=True read_only=True)
-    developer = DeveloperSerializer(many=False read_only=True)
+    games = GameSerializer(many=True, read_only=True)
+    appeals = AppealSerializer(many=True, read_only=True)
+    developer = DeveloperSerializer(many=False, read_only=True)
 
     class Meta:
         model = Game
