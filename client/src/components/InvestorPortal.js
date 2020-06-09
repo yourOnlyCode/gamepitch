@@ -14,7 +14,7 @@ export default class InvestorPortal extends Component {
 
     onChange = (evt) => {
         const newState = { ...this.state }
-        newState.newVehicle[evt.target.name] = evt.target.value
+        newState.newInvestor[evt.target.name] = evt.target.value
         this.setState(newState)
     }
 
@@ -33,27 +33,39 @@ export default class InvestorPortal extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitCreateInvestor}>
-                    <input
-                        type='text'
-                        name='name'
-                        value={this.state.newInvestor.name}
-                        onChange={this.onChange}
-                    />
-                    <input
-                        type='text'
-                        name='image_url'
-                        value={this.state.newInvestor.image_url}
-                        onChange={this.onChange}
-                    />
-                    <input
-                        type='text'
-                        name='description'
-                        value={this.state.newInvestor.description}
-                        onChange={this.onChange}
-                    />
-                    <Link to='/feed'>
-                        <input type='submit' value='invest' />
-                    </Link>
+                    <div>
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            type='text'
+                            name='name'
+                            value={this.state.newInvestor.name}
+                            onChange={this.onChange}
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="name">Url image:</label>
+                        <input
+                            type='text'
+                            name='image_url'
+                            value={this.state.newInvestor.image_url}
+                            onChange={this.onChange}
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="name">Description:</label>
+                        <input
+                            type='text'
+                            name='description'
+                            value={this.state.newInvestor.description}
+                            onChange={this.onChange}
+                        />
+                    </div>
+
+                    {/* <Link to='/feed'> */}
+                    <input type='submit' value='invest!' />
+                    {/* </Link> */}
                 </form>
             </div>
         )
