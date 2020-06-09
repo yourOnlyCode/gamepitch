@@ -8,6 +8,7 @@ router.register('developers', views.DeveloperView)
 router.register('games', views.GameView)
 router.register('investors', views.InvestorView)
 router.register('appeals', views.AppealView)
+router.register('feed', views.FeedView)
 
 urlpatterns = [
     path('', include(router.urls))]

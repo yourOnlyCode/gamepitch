@@ -1,7 +1,8 @@
 from rest_framework import viewsets
 
-from .serializers import DeveloperSerializer, GameSerializer, InvestorSerializer, AppealSerializer
+from .serializers import DeveloperSerializer, GameSerializer, InvestorSerializer, AppealSerializer, FeedSerializer
 from .models import Developer, Game, Investor, Appeal
+
 
 class DeveloperView(viewsets.ModelViewSet):
     queryset = Developer.objects.all()
@@ -21,3 +22,8 @@ class InvestorView(viewsets.ModelViewSet):
 class AppealView(viewsets.ModelViewSet):
     queryset = Appeal.objects.all()
     serializer_class = AppealSerializer
+
+
+class FeedView(viewsets.ModelViewSet):
+    queryset = Game.objects.all()
+    serializer_class = FeedSerializer
