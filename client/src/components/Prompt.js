@@ -30,7 +30,7 @@ export default class Prompt extends Component {
                                 <button onClick={this.developerPrompt}>Developer</button>
                             </Link>
 
-                            <Link to='/investorPortal' >
+                            <Link to='/feed' >
                                 <button onClick={this.investorPrompt}>Investor</button>
                             </Link>
                         </div>

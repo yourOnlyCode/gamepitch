@@ -10,7 +10,7 @@ class DeveloperSerializer(serializers.ModelSerializer):
 
 
 class GameSerializer(serializers.ModelSerializer):
-    developer = DeveloperSerializer(many=True, read_only=True)
+    developer = DeveloperSerializer(many=False, read_only=True)
 
     class Meta:
         model = Game
@@ -24,7 +24,7 @@ class GameSerializer(serializers.ModelSerializer):
             'mechanics',
             'videos',
             'demo',
-            'games')
+            'developer')
 
 
 class InvestorSerializer(serializers.ModelSerializer):

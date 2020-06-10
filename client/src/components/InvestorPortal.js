@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+
 
 export default class InvestorPortal extends Component {
 
@@ -21,7 +24,7 @@ export default class InvestorPortal extends Component {
     onSubmitCreateInvestor = async (evt) => {
         evt.preventDefault()
         try {
-            await axios.post(`/api/v1/investors`, this.state.newInvestor)
+            await axios.post(`/api/v1/investors/`, this.state.newInvestor)
             console.log('Investor Created', this.state.newInvestor)
         } catch (err) {
             console.log(err)
@@ -33,6 +36,7 @@ export default class InvestorPortal extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitCreateInvestor}>
+
                     <div>
                         <label htmlFor="name">Name:</label>
                         <input

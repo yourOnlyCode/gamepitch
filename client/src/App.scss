@@ -1,0 +1,131 @@
+//variables
+$primary: rgba(70, 131, 180, 0.466);
+$secondary: rgba(95, 215, 255, 0.705);
+$gameborder: rgb(199, 231, 224);
+
+.App {
+  text-align: center;
+}
+
+.explore {
+  background: rgba(255, 255, 255, 0.863);
+}
+
+.app-logo {
+  margin: -8px;
+}
+
+// Nav-bar
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid $primary;
+
+  .title {
+    display: flex;
+    color: silver;
+    font-size: 25px;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .nav-link {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: 0;
+      background: $primary;
+      color:white;
+      border-radius: 4px;
+
+      &:hover {
+        background: $secondary;
+      }
+    }
+
+  }
+
+}
+
+.game-container {
+
+}
+
+.head-title {
+  font-size: 35px;
+  color: silver;
+  margin: 15px;
+}
+
+.title-container {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-title {
+  font-size: 20px;
+}
+
+.game-developer {
+  border: 2px solid $primary;
+  border-radius: 40px;
+  &:hover {
+    border: 2px solid $secondary;
+  }
+}
+
+.game-image {
+  border-top: 2px solid $primary;
+  border-bottom: 2px solid $primary;
+  margin: 10px;
+  &:hover {
+    border-top: 2px solid $secondary;
+    border-bottom: 2px solid $secondary;
+  }
+}
+
+.game-feed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 45px;
+  border-top: 1px solid $gameborder;
+  border-bottom: 1px solid $gameborder;
+
+  .genre-container {
+    margin: 5px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .appeal-container {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .appeal-button {
+        margin-right: 5px;
+        background: white;
+        border: 0;
+      }
+
+    }
+  }
+
+}

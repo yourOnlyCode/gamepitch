@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 export default class Feed extends React.Component {
 
     state = {
-        posts: []
+        posts: [],
+        appealed: []
     }
 
     componentDidMount() {
@@ -25,6 +26,14 @@ export default class Feed extends React.Component {
         }
     }
 
+    onClickAppeal = async () => {
+        try {
+
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     render() {
         return (
             <div className="feed">
@@ -38,6 +47,13 @@ export default class Feed extends React.Component {
                             <div>Title: {game.name}</div>
                             <img src={game.image_url} width='250' />
                             <div>Appeal: {game.appeals.length}</div>
+                            <div>{game.genre}</div>
+
+                            <button className='appeal-button' >
+                                <span class="material-icons">
+                                    mood
+                                </span>
+                            </button>
                         </div>
                     )
                 })}
