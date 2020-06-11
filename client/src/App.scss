@@ -5,6 +5,7 @@ $gameborder: rgb(199, 231, 224);
 
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .explore {
@@ -62,10 +63,17 @@ $gameborder: rgb(199, 231, 224);
   font-size: 35px;
   color: silver;
   margin: 15px;
+  font-weight: 300;
+}
+
+.explore-head {
+  color: $secondary;
+  font-size: 25px;
+  font-weight: 300;
 }
 
 .title-container {
-  width: 250px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,6 +95,8 @@ $gameborder: rgb(199, 231, 224);
   border-top: 2px solid $primary;
   border-bottom: 2px solid $primary;
   margin: 10px;
+  width: 350px;
+  height: 200px;
   &:hover {
     border-top: 2px solid $secondary;
     border-bottom: 2px solid $secondary;
@@ -106,7 +116,7 @@ $gameborder: rgb(199, 231, 224);
 
   .genre-container {
     margin: 5px;
-    width: 250px;
+    width: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -116,7 +126,7 @@ $gameborder: rgb(199, 231, 224);
       margin: 0;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
 
       .appeal-button {

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 export default class Explore extends Component {
 
     state = {
-        hasAppeal: false,
         games: []
     }
 
@@ -25,41 +24,38 @@ export default class Explore extends Component {
         }
     }
 
-    addAppeal = () => {
-        this.setState({ hasAppeal: !this.state.hasAppeal })
-    }
-
     render() {
         return (
             <div className='explore'>
                 <div className='head-title'>Explore</div>
 
                 <div>
-                    <div>Recent</div>
+                    <div className='explore-head'>Recent</div>
 
                     <div className='game-container'>
 
-                        {this.state.games.map((game) => {
+                        {this.state.games.slice(0).reverse().map((game) => {
                             return (
                                 <div className="game-feed">
 
                                     <div className='title-container'>
                                         <Link to={`/developer/${game.developer.id}`}>
-                                            <img className='game-developer' src={game.developer.image_url} width='40' />
+                                            <img alt='video games' className='game-developer' src={game.developer.image_url} width='40' />
                                         </Link>
 
                                         <div className='game-title'>{game.name}</div>
                                     </div>
 
                                     <Link to={`/game/${game.id}`}>
-                                        <img className='game-image' src={game.image_url} width='250' height='150' />
+                                        <img alt='video games' className='game-image' src={game.image_url} />
                                     </Link>
 
                                     <div className='genre-container'>
 
                                         <div className='appeal-container'>
-                                            <button className='appeal-button' onClick={this.addAppeal}>
-                                                {this.state.hasAppeal === false
+                                            <div className='appeal-button'>
+
+                                                {game.hasAppeal === false
 
                                                     ? < span class="material-icons">
                                                         sentiment_dissatisfied
@@ -68,9 +64,10 @@ export default class Explore extends Component {
 
                                                     : <span class="material-icons">
                                                         mood
-                                                </span>
+                                                    </span>
                                                 }
-                                            </button>
+                                            </div>
+                                            {game.hasAppeal}
                                         </div>
 
                                         <div>{game.genre}</div>

@@ -28,11 +28,11 @@ export default class DevPortal extends Component {
         return (
             <div>
                 <div>{this.state.name}</div>
-                <img src={this.state.image_url} width='250' />
+                <img alt='video games' src={this.state.image_url} width='250' />
                 <div>Bio: {this.state.bio}</div>
                 <div>Contact: {this.state.email}</div>
                 <div>
-                    <img src="https://louisville.edu/medicine/departments/biochemistry/our_people/student-directories/networking-icons/facebook-logo/image" width='20' />
+                    <img alt='video games' src="https://louisville.edu/medicine/departments/biochemistry/our_people/student-directories/networking-icons/facebook-logo/image" width='20' />
                     {this.state.facebook}
                 </div>
             </div>

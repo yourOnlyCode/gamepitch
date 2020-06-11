@@ -24,6 +24,7 @@ class GameSerializer(serializers.ModelSerializer):
             'mechanics',
             'videos',
             'demo',
+            'hasAppeal',
             'developer')
 
 
@@ -41,10 +42,9 @@ class AppealSerializer(serializers.ModelSerializer):
 
 class FeedSerializer(serializers.ModelSerializer):
     games = GameSerializer(many=True, read_only=True)
-    appeals = AppealSerializer(many=True, read_only=True)
     developer = DeveloperSerializer(many=False, read_only=True)
 
     class Meta:
         model = Game
         fields = ('id', 'name', 'image_url', 'description',
-                  'genre', 'games', 'appeals', 'developer')
+                  'genre', 'games', 'hasAppeal', 'developer')

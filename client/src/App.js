@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
             <Link to='' >
               <div className='app-logo'>
-                <img src='https://i.pinimg.com/originals/5e/22/86/5e2286e02a8d3a65558ad3adf7534670.jpg' width='80' />
+                <img alt='video games' src='https://i.pinimg.com/originals/5e/22/86/5e2286e02a8d3a65558ad3adf7534670.jpg' width='80' />
               </div>
             </Link>
 

@@ -45,7 +45,7 @@ export default class Feed extends React.Component {
                                 <div>Developer: {game.developer.name}</div>
                             </Link>
                             <div>Title: {game.name}</div>
-                            <img src={game.image_url} width='250' />
+                            <img alt='video games' src={game.image_url} width='250' />
                             <div>Appeal: {game.appeals.length}</div>
                             <div>{game.genre}</div>
 

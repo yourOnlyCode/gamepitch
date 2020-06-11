@@ -35,7 +35,7 @@ export default class AdminDeveloperPrompt extends Component {
                         return (
                             <Link to={`/devPortal/${dev.id}`}>
                                 <div>{dev.name}</div>
-                                <img src={dev.image_url} width='150' />
+                                <img alt='video games' src={dev.image_url} width='150' />
                             </Link>
                         )
                     })}

@@ -38,7 +38,7 @@ export default class Investor extends Component {
                         <div className="game-feed">
                             <Link to={`/investors/${investor.id}`}>
                                 <div>{investor.name}</div>
-                                <img src={investor.image_url} width='150' />
+                                <img alt='video games' src={investor.image_url} width='150' />
                             </Link>
                         </div>
                     )

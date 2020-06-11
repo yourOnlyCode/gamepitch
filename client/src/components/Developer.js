@@ -28,7 +28,7 @@ export default class Developer extends React.Component {
         return (
             <div>
                 <div>{this.state.name}</div>
-                <img src={this.state.image_url} width='250' />
+                <img alt='video games' src={this.state.image_url} width='250' />
             </div>
         )
     }
