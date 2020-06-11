@@ -65,18 +65,18 @@ export default class Game extends Component {
 
                             <div className='game-description'>{this.state.description}</div>
 
-                            <label>Mechanics</label>
-                            <div>{this.state.mechanics}</div>
+                            <label className='game-label'>Mechanics</label>
+                            <div className='detail-text'>{this.state.mechanics}</div>
                         </div>
 
                         <div className='details-container'>
-                            <div className='single-details'>Details</div>
 
-                            <label>Genre</label>
-                            <div className='single-genre'>{this.state.genre}</div>
+                            <label className='single-details'>Genre</label>
+                            <div className='detail-text'>{this.state.genre}</div>
 
-                            <button className='appeal-container'>
-                                <div className='appeal-button'>
+                            <div className='appeal-container'>
+                                <label className='single-details'>Appeal</label>
+                                <button className='appeal-button'>
 
                                     {this.state.hasAppeal === false
 
@@ -89,24 +89,43 @@ export default class Game extends Component {
                                             mood
                                         </span>
                                     }
-                                </div>
-                            </button>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
+                    <div className='bottom-container'>
 
+                        <div className='bottom-break'>
 
-                    <iframe
-                        className='game-video'
-                        title='Dragon Game'
-                        width='560'
-                        height='315'
-                        rel='0'
-                        src={this.state.videos}
-                        frameborder="0"
-                        modestbranding='1'
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        </div>
+
+                        <div className='game-video'>
+
+                            {this.state.videos === ''
+                                ? null
+
+                                : <div>
+                                    <label className='game-label'>Videos</label>
+                                    <iframe
+                                        title='Dragon Game'
+                                        width='560'
+                                        height='315'
+                                        rel='0'
+                                        src={this.state.videos}
+                                        frameborder="0"
+                                        modestbranding='1'
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            }
+                        </div>
+                        <div className='bottom-break'>
+
+                        </div>
+
+                    </div>
 
 
 

@@ -84,12 +84,12 @@ export default class Explore extends Component {
 
                                                         ? < span class="material-icons">
                                                             sentiment_dissatisfied
-                                                    </span>
+                                                        </span>
 
 
                                                         : <span class="material-icons">
                                                             mood
-                                                    </span>
+                                                        </span>
                                                     }
                                                 </div>
                                                 {game.hasAppeal}

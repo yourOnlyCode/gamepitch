@@ -75,6 +75,17 @@ export default class App extends React.Component {
             <Route exact path="/investor" component={Investor} />
             <Route exact path="/game/:gameId" component={Game} />
           </Switch>
+
+
+          <div className='footer'>
+
+            <div className='footer-name'>
+              Matthew Mullin
+            </div>
+
+          </div>
+
+
         </Router>
 
       </div>

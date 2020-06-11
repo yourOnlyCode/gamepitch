@@ -2,6 +2,7 @@
 $primary: rgba(70, 131, 180, 0.466);
 $secondary: rgba(95, 215, 255, 0.705);
 $gameborder: rgb(199, 231, 224);
+$detailtext: rgb(146, 146, 146);
 
 .App {
   text-align: center;
@@ -55,8 +56,11 @@ $gameborder: rgb(199, 231, 224);
 
 }
 
-.game-container {
-
+.detail-text {
+  margin: 5px 5px 20px 5px;
+  font-style: italic;
+  font-weight: 100;
+  color: black;
 }
 
 .head-title {
@@ -156,6 +160,7 @@ $gameborder: rgb(199, 231, 224);
 // Single game page
 
 .center-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,36 +179,45 @@ $gameborder: rgb(199, 231, 224);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 15%;
   margin: 50px;
 }
 
-.details-container {
-  width: 35%;
-  height: 315px;
-  margin: 70px 40px;
-  border: 2px solid $primary;
-
-  .single-details {
-    margin: 15px;
-  }
-
-  .single-genre {
-    
-  }
-
-}
-
 .body-content {
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.details-container {
+  width: 15%;
+  height: 315px;
+  margin: 70px 40px;
+  border: 2px solid $primary;
+
+}
+
+.single-details {
+  margin: 15px;
+  font-size: 25px;
+  font-weight: 300;
+  color: silver;
+}
+
+.appeal-button {
+  margin: 15px 15px 25px 15px;
+  background: white;
+  border: 2px solid $primary;
+  padding: 5px 10px;
+}
+
 .single-game-title {
   margin: 25px 0 10px 0;
-  font-size: 30px;
+  font-size: 45px;
+  font-weight: 200;
+  color: silver;
 }
 
 .single-dev-image {
@@ -225,11 +239,51 @@ $gameborder: rgb(199, 231, 224);
 }
 
 .game-description {
-  width: 73%;
+  width: 75%;
   text-align: justify;
   margin: 15px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.bottom-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .game-video {
-  margin: 25px;
+  margin: 35px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-break {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  margin: 50px;
+}
+
+.game-label {
+  margin: 10px;
+  font-size: 45px;
+  font-weight: 100;
+  color: silver;
+}
+
+// Footer
+
+.footer {
+  border-top: 1px solid $primary;
+}
+
+.footer-name {
+  margin: 35px;
 }
