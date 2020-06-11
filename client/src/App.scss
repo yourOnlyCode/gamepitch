@@ -70,6 +70,19 @@ $gameborder: rgb(199, 231, 224);
   color: $secondary;
   font-size: 25px;
   font-weight: 300;
+  padding: 0;
+  border: 0;
+  background: white;
+  margin: 0 15px;
+  &:hover {
+    color: $gameborder;
+    font-size: 30px;
+    margin: -5px 5px;
+  }
+  &:focus {
+    color: rgb(196, 196, 196);
+    outline: 0;
+  }
 }
 
 .title-container {

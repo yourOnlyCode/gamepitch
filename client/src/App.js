@@ -13,6 +13,9 @@ import Game from './components/Game.js'
 
 import './App.scss';
 
+// Desired functionalities:
+// Would like to have a scheduling functionality, like Calendly, to schedule face to face eith developers.
+
 export default class App extends React.Component {
 
   render() {

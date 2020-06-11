@@ -33,10 +33,12 @@ export default class AdminDeveloperPrompt extends Component {
                 <div className="dev-select">
                     {this.state.developers.map((dev) => {
                         return (
-                            <Link to={`/devPortal/${dev.id}`}>
-                                <div>{dev.name}</div>
-                                <img alt='video games' src={dev.image_url} width='150' />
-                            </Link>
+                            <div className="game-feed">
+                                <Link to={`/devPortal/${dev.id}`}>
+                                    <div>{dev.name}</div>
+                                    <img alt='video games' src={dev.image_url} width='150' />
+                                </Link>
+                            </div>
                         )
                     })}
 

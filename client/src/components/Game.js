@@ -48,7 +48,7 @@ export default class Game extends Component {
     render() {
         return (
             <div>
-                <div>{this.state.name}</div>
+                <div className='game-title'>{this.state.name}</div>
                 <img alt='video games' src={this.state.image_url} width='300' />
                 <div>{this.state.description}</div>
                 <div>{this.state.genre}</div>

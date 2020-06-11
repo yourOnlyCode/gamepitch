@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-import ExploreGenre from './components/ExploreGenre.js'
+import ExplorePopular from './ExplorePopular.js'
 
 export default class Explore extends Component {
 
     state = {
         games: [],
-        byGenre: false
+        byPopular: false
     }
 
     componentDidMount() {
@@ -27,8 +27,12 @@ export default class Explore extends Component {
         }
     }
 
-    trueGenreSearch = () => {
-        this.state.byGenre = true
+    toggleGenreSearch = () => {
+        this.setState({ byPopular: true })
+    }
+
+    toggleRecentSearch = () => {
+        this.setState({ byPopular: false })
     }
 
     render() {
@@ -36,12 +40,21 @@ export default class Explore extends Component {
             <div className='explore'>
 
                 <div className='head-title'>Explore</div>
-                <div className='explore-head'>
-                    <button>Recent</button>
-                    <button>Genre</button>
+
+                <div>
+                    <button
+                        className='explore-head'
+                        tabIndex='0'
+                        onClick={this.toggleGenreSearch}>
+                        Recent</button>
+                    <button
+                        className='explore-head'
+                        tabIndex='0'
+                        onClick={this.toggleRecentSearch}>
+                        Popular</button>
                 </div>
-                
-                {this.state.byGenre === false
+
+                {this.state.byPopular === true
                     ? <div>
 
                         <div className='game-container'>
@@ -94,7 +107,7 @@ export default class Explore extends Component {
                     </div>
 
                     : <div>
-                        <ExploreGenre />
+                        <ExplorePopular />
                     </div>
 
                 }

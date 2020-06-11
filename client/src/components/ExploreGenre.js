@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class ExploreGenre extends Component {
 
     state = {
-        games: []
+        games: [],
+        genres: []
     }
 
     componentDidMount() {
@@ -22,18 +24,20 @@ export default class ExploreGenre extends Component {
         }
     }
 
-
     render() {
         return (
             <div>
+                <select>
+                    {this.state.games.map((game) => {
+                        return (
+                            <option>
+                                {game.genre}
+                            </option>
+                        )
+                    })}
+                </select>
 
-                {this.state.games.map((game) => {
-                    return (
-                        <div>
-                            {game.genre}
-                        </div>
-                    )
-                })}
+                
 
             </div>
         )
