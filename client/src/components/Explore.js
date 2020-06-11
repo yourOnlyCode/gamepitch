@@ -8,7 +8,7 @@ export default class Explore extends Component {
 
     state = {
         games: [],
-        byPopular: false
+        byPopular: true
     }
 
     componentDidMount() {
@@ -59,7 +59,7 @@ export default class Explore extends Component {
 
                         <div className='game-container'>
 
-                            {this.state.games.slice(0).reverse().map((game) => {
+                            {this.state.games.map((game) => {
                                 return (
                                     <div className="game-feed">
 

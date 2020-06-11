@@ -47,36 +47,69 @@ export default class Game extends Component {
 
     render() {
         return (
-            <div>
-                <div className='game-title'>{this.state.name}</div>
-                <img alt='video games' className='game-image' src={this.state.image_url} />
-                <div className='game-description'>{this.state.description}</div>
-                <div>{this.state.genre}</div>
-
-                <div>{this.state.mechanics}</div>
-                <iframe width='350' height='200' src={this.state.videos}></iframe>
-
-                <div>By {this.state.developer.name}</div>
+            <div className='single-container'>
+                <div className='center-content'>
 
 
-                <button className='appeal-container'>
-                    <div className='appeal-button'>
+                    <div className='head-body-content'>
 
-                        {this.state.hasAppeal === false
+                        <div className='head-content'>
+                            <img className='single-dev-image' src={this.state.developer.image_url} />
+                            <div className='single-game-dev'>{this.state.developer.name}</div>
+                        </div>
 
-                            ? < span class="material-icons" onClick={this.addAppeal}>
-                                sentiment_dissatisfied
-                            </span>
+                        <div className='body-content'>
+                            <div className='single-game-title'>{this.state.name}</div>
+                            <img alt='video games'
+                                className='single-game-image' src={this.state.image_url} />
+
+                            <div className='game-description'>{this.state.description}</div>
 
 
-                            : <span class="material-icons" onClick={this.removeAppeal}>
-                                mood
-                             </span>
-                        }
+
+                            <div>{this.state.mechanics}</div>
+                        </div>
+
+                        <div className='details-container'>
+                            <div className='single-details'>Details</div>
+
+                            <label>Genre</label>
+                            <div className='single-genre'>{this.state.genre}</div>
+
+                            <button className='appeal-container'>
+                                <div className='appeal-button'>
+
+                                    {this.state.hasAppeal === false
+
+                                        ? < span class="material-icons" onClick={this.addAppeal}>
+                                            sentiment_dissatisfied
+                                        </span>
+
+
+                                        : <span class="material-icons" onClick={this.removeAppeal}>
+                                            mood
+                                        </span>
+                                    }
+                                </div>
+                            </button>
+                        </div>
                     </div>
-                </button>
 
-            </div>
+
+
+                    <iframe title='Dragon Game'
+                        width='560'
+                        height='315'
+                        src={this.state.videos}
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+
+
+                </div>
+
+            </div >
         )
     }
 }

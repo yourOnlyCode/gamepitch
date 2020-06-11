@@ -155,3 +155,67 @@ $gameborder: rgb(199, 231, 224);
 
 // Single game page
 
+.head-body-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.head-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 25%;
+  margin: 50px;
+}
+
+.details-container {
+  width: 40%;
+  height: 315px;
+  margin: 70px 40px;
+  border: 2px solid $primary;
+
+  .single-details {
+    margin: 15px;
+  }
+
+  .single-genre {
+    
+  }
+
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-game-title {
+  margin: 25px 0 10px 0;
+  font-size: 30px;
+}
+
+.single-dev-image {
+  width: 100px;
+  margin: 15px;
+}
+
+.single-game-dev {
+  margin: 15px;
+}
+
+.single-game-image {
+  width: 560px;
+  height: 315px;
+  border: 2px solid $primary;
+}
+
+.game-description {
+  width: 73%;
+  text-align: justify;
+  margin: 15px;
+}
