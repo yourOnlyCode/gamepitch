@@ -96,7 +96,9 @@ export default class Game extends Component {
 
 
 
-                    <iframe title='Dragon Game'
+                    <iframe
+                        className='game-video'
+                        title='Dragon Game'
                         width='560'
                         height='315'
                         rel='0'
