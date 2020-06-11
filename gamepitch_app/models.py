@@ -15,7 +15,7 @@ class Developer(models.Model):
 class Game(models.Model):
     name = models.CharField(max_length=120, blank=True)
     image_url = models.TextField(blank=True)
-    description = models.TextField(max_length=260, blank=True)
+    description = models.TextField(max_length=300, blank=True)
     genre = models.CharField(max_length=50, blank=True)
     concept_image = models.TextField(blank=True)
     mechanics = models.TextField(blank=True)
