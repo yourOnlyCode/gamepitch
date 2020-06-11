@@ -49,12 +49,12 @@ export default class Game extends Component {
         return (
             <div>
                 <div className='game-title'>{this.state.name}</div>
-                <img alt='video games' src={this.state.image_url} width='300' />
-                <div>{this.state.description}</div>
+                <img alt='video games' className='game-image' src={this.state.image_url} />
+                <div className='game-description'>{this.state.description}</div>
                 <div>{this.state.genre}</div>
 
                 <div>{this.state.mechanics}</div>
-
+                <iframe width='350' height='200' src={this.state.videos}></iframe>
 
                 <div>By {this.state.developer.name}</div>
 
