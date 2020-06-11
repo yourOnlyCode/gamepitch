@@ -155,6 +155,13 @@ $gameborder: rgb(199, 231, 224);
 
 // Single game page
 
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .head-body-content {
   display: flex;
   flex-direction: row;
@@ -166,13 +173,13 @@ $gameborder: rgb(199, 231, 224);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 25%;
   margin: 50px;
 }
 
 .details-container {
-  width: 40%;
+  width: 35%;
   height: 315px;
   margin: 70px 40px;
   border: 2px solid $primary;
@@ -202,10 +209,13 @@ $gameborder: rgb(199, 231, 224);
 .single-dev-image {
   width: 100px;
   margin: 15px;
+  border: 2px solid $primary;
+  border-radius: 80px;
 }
 
 .single-game-dev {
-  margin: 15px;
+  width: 100%;
+  margin: 10px;
 }
 
 .single-game-image {

@@ -65,8 +65,7 @@ export default class Game extends Component {
 
                             <div className='game-description'>{this.state.description}</div>
 
-
-
+                            <label>Mechanics</label>
                             <div>{this.state.mechanics}</div>
                         </div>
 
@@ -100,8 +99,10 @@ export default class Game extends Component {
                     <iframe title='Dragon Game'
                         width='560'
                         height='315'
+                        rel='0'
                         src={this.state.videos}
                         frameborder="0"
+                        modestbranding='1'
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
 
