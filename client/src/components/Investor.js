@@ -36,9 +36,9 @@ export default class Investor extends Component {
                 {this.state.investors.map((investor) => {
                     return (
                         <div className="game-feed">
-                            <Link to={`/investors/${investor.id}`}>
+                            <Link className='investor-title' to={`/investors/${investor.id}`}>
                                 <div className='investor-title'>{investor.name}</div>
-                                <img alt='video games' src={investor.image_url} width='150' />
+                                <img className='investor-image' alt='video games' src={investor.image_url} width='150' />
                             </Link>
                         </div>
                     )

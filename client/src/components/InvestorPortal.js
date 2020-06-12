@@ -34,12 +34,12 @@ export default class InvestorPortal extends Component {
 
     render() {
         return (
-            <div>
+            <div className='investor-form'>
                 <form onSubmit={this.onSubmitCreateInvestor}>
 
-                    <div>
-                        <label htmlFor="name">Name:</label>
-                        <input
+                    <div className='investor-form-child'>
+                        <label className='investor-label' htmlFor="name">Name</label>
+                        <input className='investor-input'
                             type='text'
                             name='name'
                             value={this.state.newInvestor.name}
@@ -47,9 +47,9 @@ export default class InvestorPortal extends Component {
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="name">Url image:</label>
-                        <input
+                    <div className='investor-form-child'>
+                        <label className='investor-label' htmlFor="name">Url image</label>
+                        <input className='investor-input'
                             type='text'
                             name='image_url'
                             value={this.state.newInvestor.image_url}
@@ -57,9 +57,9 @@ export default class InvestorPortal extends Component {
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="name">Description:</label>
-                        <input
+                    <div className='investor-form-child'>
+                        <label className='investor-label' htmlFor="name">Description</label>
+                        <input className='investor-input'
                             type='text'
                             name='description'
                             value={this.state.newInvestor.description}
@@ -68,7 +68,7 @@ export default class InvestorPortal extends Component {
                     </div>
 
                     {/* <Link to='/feed'> */}
-                    <input type='submit' value='invest!' />
+                    <input className='prompt-button' type='submit' value='invest!' />
                     {/* </Link> */}
                 </form>
             </div>
