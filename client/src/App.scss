@@ -70,6 +70,29 @@ $detailtext: rgb(146, 146, 146);
   font-weight: 300;
 }
 
+// prompt
+
+.prompt-container {
+  height: 580px;
+}
+
+.prompt-button {
+  margin: 15px 15px 25px 15px;
+  background: white;
+  border: 2px solid rgba(70, 131, 180, 0.226);
+  padding: 5px 10px;
+  border-radius: 4px;
+  &:hover {
+    background: rgba(70, 131, 180, 0.226);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+// explore
+
 .explore-head {
   color: $secondary;
   font-size: 25px;
@@ -97,12 +120,27 @@ $detailtext: rgb(146, 146, 146);
 }
 
 .game-title {
-  font-size: 20px;
+  text-decoration: none;
+  color: $secondary;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 0;
+  border: 0;
+  background: white;
+  margin: 5px 15px;
+  &:hover {
+    color: $gameborder;
+  }
+  &:focus {
+    color: rgb(196, 196, 196);
+    outline: 0;
+  }
 }
 
 .game-developer {
+  margin-top: 15px;
   border: 2px solid $primary;
-  border-radius: 40px;
+  border-radius: 80px;
   &:hover {
     border: 2px solid $secondary;
   }
@@ -196,7 +234,7 @@ $detailtext: rgb(146, 146, 146);
   height: 315px;
   margin: 70px 40px;
   border: 2px solid $primary;
-
+  border-radius: 4px;
 }
 
 .single-details {
@@ -209,8 +247,15 @@ $detailtext: rgb(146, 146, 146);
 .appeal-button {
   margin: 15px 15px 25px 15px;
   background: white;
-  border: 2px solid $primary;
+  border: 2px solid rgba(70, 131, 180, 0.226);
   padding: 5px 10px;
+  border-radius: 4px;
+  &:hover {
+    background: rgba(70, 131, 180, 0.226);
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 
 .single-game-title {
@@ -236,6 +281,7 @@ $detailtext: rgb(146, 146, 146);
   width: 560px;
   height: 315px;
   border: 2px solid $primary;
+  border-radius: 4px;
 }
 
 .game-description {
@@ -278,6 +324,67 @@ $detailtext: rgb(146, 146, 146);
   color: silver;
 }
 
+// dev page
+
+.dev-image {
+  margin: 15px;
+  border: 2px solid $primary;
+  border-radius: 180px;
+}
+
+.dev-details {
+  font-size: 25px;
+  color: silver;
+  font-weight: 100;
+
+  .dev-bio {
+    margin: 10px;
+  }
+
+  .dev-email {
+    margin: 10px;
+  }
+
+  .dev-facebook-container {
+    margin: 10px;
+
+    .dev-facebook {
+      margin: -3px 10px;
+    }
+  }
+
+}
+
+// investors
+
+.create-label {
+  color: $secondary;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 0;
+  border: 0;
+  background: white;
+  margin: 0 15px;
+}
+
+.investor-title {
+  text-decoration: none;
+  color: $secondary;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 0;
+  border: 0;
+  background: white;
+  margin: 25px 15px;
+  &:hover {
+    color: $gameborder;
+  }
+  &:focus {
+    color: rgb(196, 196, 196);
+    outline: 0;
+  }
+}
+
 // Footer
 
 .footer {
@@ -286,4 +393,6 @@ $detailtext: rgb(146, 146, 146);
 
 .footer-name {
   margin: 35px;
+  color: silver;
+  font-weight: 100;
 }

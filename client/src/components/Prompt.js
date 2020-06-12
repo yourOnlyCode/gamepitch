@@ -20,18 +20,18 @@ export default class Prompt extends Component {
 
     render() {
         return (
-            <div>
+            <div className='prompt-container'>
                 <div>
                     {this.state.prompt === true
 
                         ? <div className='prompt'>
-                            <div>Are you a Developer or Investor?</div>
+                            <div className='detail-text'>Are you a Developer or Investor?</div>
                             <Link to='/AdminDev' >
-                                <button onClick={this.developerPrompt}>Developer</button>
+                                <button className='prompt-button' onClick={this.developerPrompt}>Developer</button>
                             </Link>
 
                             <Link to='/explore' >
-                                <button onClick={this.investorPrompt}>Investor</button>
+                                <button className='prompt-button' onClick={this.investorPrompt}>Investor</button>
                             </Link>
                         </div>
 

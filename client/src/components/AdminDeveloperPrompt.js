@@ -27,16 +27,16 @@ export default class AdminDeveloperPrompt extends Component {
     render() {
         return (
             <div>
-                <div>Welcome, Developer!</div>
-                <div>Select Profile</div>
+
+                <div className='game-label'>Developer Profiles</div>
 
                 <div className="dev-select">
                     {this.state.developers.map((dev) => {
                         return (
                             <div className="game-feed">
-                                <Link to={`/devPortal/${dev.id}`}>
-                                    <div>{dev.name}</div>
-                                    <img alt='video games' src={dev.image_url} width='150' />
+                                <Link className='game-title' to={`/devPortal/${dev.id}`}>
+                                    <div className='game-title'>{dev.name}</div>
+                                    <img className='game-developer' alt='video games' src={dev.image_url} width='150' />
                                 </Link>
                             </div>
                         )
