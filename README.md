@@ -6,6 +6,6 @@
  
  Project board: [Here](https://github.com/yourOnlyCode/gamepitch/projects/1?fullscreen=true)
 
-[Wireframe](https://imgur.com/0dryzS4)
+![Wireframe](https://imgur.com/0dryzS4)
 
-[ERD](https://imgur.com/nO75TUm)
+![ERD](https://imgur.com/nO75TUm)
