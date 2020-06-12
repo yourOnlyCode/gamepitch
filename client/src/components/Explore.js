@@ -59,7 +59,7 @@ export default class Explore extends Component {
 
                         <div className='game-container'>
 
-                            {this.state.games.map((game) => {
+                            {this.state.games.reverse().map((game) => {
                                 return (
                                     <div className="game-feed">
 
