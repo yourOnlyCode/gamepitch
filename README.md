@@ -5,9 +5,11 @@
  Launch app: [Here](https://gamepitch.herokuapp.com/)
  
  Project board: [Here](https://github.com/yourOnlyCode/gamepitch/projects/1?fullscreen=true)
+ 
+ ## Wireframe
 
 ![Wireframe](https://imgur.com/0dryzS4.png)
 
-# 
+## ERD
 
 ![ERD](https://imgur.com/nO75TUm.png)
